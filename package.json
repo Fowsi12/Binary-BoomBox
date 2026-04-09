@@ -13,7 +13,8 @@
     "dotenv": "17.3.1",
     "express": "5.2.1",
     "pg": "8.20.0",
-    "pg-upload": "0.0.10"
+    "pg-upload": "0.0.10",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "nodemon": "3.1.14"

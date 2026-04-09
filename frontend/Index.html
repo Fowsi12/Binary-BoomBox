@@ -7,12 +7,38 @@
     <script src="js/endpoint-user.js"></script>
     <script src="js/dvale.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Binary BoomBox</title>
   </head>
   <body>
+    <header>
+      <h1>Binary BoomBox</h1>
+      <input
+        type="text"
+        id="search"
+        placeholder="Søg efter et album, en sang, bands og kunstnere..."
+      />
+    </header>
+
+    <main> <!-- Skal ændres men ved ikke til hvad - kunne ikke huske andre måde at opdele på så kopierede direkte fra chat til insperation-->
+      <section> <!-- Vil jeg også ændre fordi vi ikke har brugt det i undervisning - og samme grund gælder som ovenpå -->
+        <h2>Seneste sange</h2>
+        <div id="recent-songs" class="song-list"></div>
+      </section>
+
+      <section>
+        <h2>kø</h2>
+        <div id="kø" class="song-list"></div>
+      </section>
+    </main>
+
     <div id="screensaver">
       <h1>Binary BoomBox</h1>
       <p>Binary BoomBox — Gør stemningen valgfri.</p>
     </div>
+    <script src="js/forside.js"></script>
   </body>
 </html>

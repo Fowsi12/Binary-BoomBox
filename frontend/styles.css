@@ -1,7 +1,7 @@
 #screensaver {
   position: fixed;
   inset: 0;
-  background: black;
+  background: #0d0d0d; /* mørk baggrund for screensaver */
   color: white;
   display: none;
   justify-content: center;
@@ -11,4 +11,78 @@
 
 body.Dvale #screensaver {
   display: flex;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0d0d0d; /* mørk baggrund */
+  color: white;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background: linear-gradient(
+    90deg,
+    #1a1a1a,
+    #6c3aff
+  ); /* sort baggrund med Lilla gradient i headeren */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header h1 {
+  text-align: center;
+  color: #b28cff; /* lys lilla titel */
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: #262626; /* mørk baggrund for input */
+  color: white;
+}
+
+/* Sections */
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #6c3aff; /* lilla farve til sektionstitler */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* mere bold */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Song cards */
+.song-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.song {
+  background: #262626; /* mørk baggrund for sang- kort/boksene */
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.song:hover {
+  background: #b28cff; /* lys lilla farve når musen er over */
+  cursor: pointer;
+  align-items: center;
 }

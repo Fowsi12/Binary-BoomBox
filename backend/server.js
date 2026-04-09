@@ -12,3 +12,7 @@ function onEachRequest(request, response, next) {
   console.log(new Date(), request.method, request.url);
   next();
 }
+
+server.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});

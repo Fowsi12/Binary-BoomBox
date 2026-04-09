@@ -6,3 +6,5 @@ const timestamp = (await db.query("select now() as timestamp")).rows[0][
   "timestamp"
 ];
 console.log(`Recreating database on ${timestamp}...`);
+
+console.log("server is running, creating database...");

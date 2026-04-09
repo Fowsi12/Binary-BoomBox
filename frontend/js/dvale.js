@@ -1,24 +1,26 @@
-let idleTimer;
-const idleTime = 60000; // 10 seconds
+let DvaleTiden; //
+const DvaleTid = 15000; // 15 sekunder før den går i dvale
 
 function resetTimer() {
-  clearTimeout(idleTimer);
-  idleTimer = setTimeout(goIdle, idleTime);
+  clearTimeout(DvaleTiden); // Stopper den nuværende timer, hvis der er en
+  DvaleTiden = setTimeout(designDvale, DvaleTid); // Starter en ny timer, som kalder funktionen 'designDvale' efter 'DvaleTid'
 }
 
-function goIdle() {
-  document.body.classList.add("idle");
+function designDvale() {
+  document.body.classList.add("Dvale"); // Tilføjer CSS-klassen "Dvale" til <body>
 }
 
-function wakeUp() {
-  document.body.classList.remove("idle");
-  resetTimer();
+function DesignDvale2() {
+  document.body.classList.remove("Dvale"); // Fjerner "Dvale"-klassen igen fordi skærmen er blevet vækket af brugeren
+  resetTimer(); // starter timeren for at gå i dvale igen, hvis der ikke er nogen aktivitet i det næste minut
 }
 
 // Events
 ["click", "mousemove", "keydown", "touchstart"].forEach((event) => {
-  window.addEventListener(event, wakeUp);
+  window.addEventListener(event, DesignDvale2); // Kort fortalt: // Når brugeren gør noget, kaldes funktionen 'DesignDvale2'
 });
 
-// Start timer
-resetTimer();
+// Lang forklaring: føler den havde brug for en længere forklaring pga jeg havde det svært ved at forstå det selv, så håber det kan hjælpe jer med at forstå.
+// Når brugeren klikker, bevæger musen, trykker på en tast eller starter en berøring på skærmen, vil det udløse et event. For hvert af disse events tilføjer vi en event listener til vinduet (window), som lytter/mærker/whatever efter disse specifikke handlinger. Når en af disse handlinger sker, kaldes funktionen 'DesignDvale2', som fjerner "Dvale"-klassen fra <body> og starter timeren igen for at gå i dvale, hvis der ikke er nogen aktivitet i det næste minut - vil det så ske.
+
+resetTimer(); //Her bliver funktionen brugt på linje 4-6, hvilket sørger for at timeren starter med det samme, når skærmen ikke bliver brugt.

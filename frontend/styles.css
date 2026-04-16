@@ -1,0 +1,208 @@
+/* STYLES FOR THE HELE SIDEN */
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(
+    90deg,
+    #1a1a1a,
+    #6c3aff
+  ); /* sort baggrund med Lilla gradient i headeren */
+
+  h1 {
+    text-align: center;
+    color: #b28cff; /* lys lilla titel */
+    font-family:
+      "Orbitron", sans-serif; /* futuristisk font på titlen - skrifttype taget fra Google Fonts */
+    letter-spacing: 2px;
+  }
+}
+
+.main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+header {
+  padding: 20px;
+  background: transparent; /* ingen baggrund for headeren - vigtigt */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* HOVEDMENU, BUTTONS, LUCKY - STYLES OG PLACEMENT */
+
+.hovedmenu {
+  position: fixed; /* låser menuen fast på skærmen*/
+  top: 50%; /*flytter den ned til midten lodret*/
+  left: 50%;/*flytter den til midten vandret*/
+  transform: translate(-50%, -50%); /*centrere den præcist */
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);/*2 kollonner (2x2 layout)*/
+  gap: 20px;
+}
+
+.button {
+  background-color: black;
+  color: yellow;
+  padding: 40px;
+  border: 2px solid purple;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button:hover {
+  background: #333;
+  border-color: #b300ff;
+}
+
+/* SIDEBAR STYLE */
+
+.sidebar {
+  width: 150px;
+  background: #1a1a1a;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar ul {
+  flex: 1; /*Skubber hjælp ned*/
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar li:hover {
+  color: #b28cff;
+}
+
+/* sidebar buttons style*/
+.sidebar-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+
+  background-color: black;
+  color: yellow;
+  padding: 10 px;
+  border: 2px solid purple;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+.sidebar-button:hover {
+  background-color: #222;
+  border-color: #b300ff;
+}
+
+/* LOGO PLACEMENT STYLES */
+#music_note_purple {
+  position: relative;
+  text-align: center;
+  margin: 50px auto;
+  float: top;
+}
+
+/* HJÆLP BUTTON STYLE */
+.help-btn {
+  margin-top: auto;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* KURV STYLE */
+.cart-button {
+  position: fixed; /* fixed betyder den ikke bevæger sig når man scroller*/
+  top: 20px;
+  right: 20px;
+  background-color: black;
+  color: yellow;
+  padding: 10 px 15 px;
+  border: 2px solid purple; /* lilla ring rundt om knappen*/
+  border-radius: 8px; /* gør kanterne lidt runde*/
+  cursor: pointer; /* musen(cursor) bliver til en hånd over knappen*/
+  font-size: 16 px;
+}
+.cart-button:hover {
+  background-color: #333; /* lidt lysere sort når man hover*/
+}
+
+/* SCREENSAVER STYLE */
+/* --- SKAL ALTID LIGGE NEDERST --- */
+#screensaver {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d; /* mørk baggrund for screensaver */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p {
+    font-family: "Times New Roman", Times, serif;
+  }
+  h1 {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+#screensaver h1 {
+  font-family: "Orbitron", sans-serif;
+}
+
+body.Dvale #screensaver {
+  display: flex;
+}
+
+/* POP-UP BOX STYLE */
+#help-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#help-popup.hidden {
+  display: none;
+}
+/* Indhold */
+.help-content {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  font-family: "Montserrat", sans-serif;
+}
+.help-content h2 {
+  margin-top: 0;
+}
+.help-content button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.help-btn {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.help-btn:hover {
+  color: #b28cff;
+}

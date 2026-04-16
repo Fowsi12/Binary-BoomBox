@@ -3,10 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="jsonview.js"></script>
+    <script src="connect.js"></script>
     <script src="endpoint-user.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Binary BoomBox</title>
   </head>
-  <body></body>
-</html>
+  <body>
+
+    <nav class="sidebar">
+      <ul>
+        <li><button id="hjem" onclick="window.location.href='index.html'">Hjem</button></li>
+        <li><button id="senestafspillet" onclick="window.location.href='html/senestafspillet.html'">Senest afspillet</button></li>
+        <li><button id="kø" onclick="window.location.href='html/kø.html'">Kø</button></li>
+        <button id="help-btn" onClick>Hjælp</button>
+      </ul>
+    </nav>
+
+    <main>
+      <header>
+    <h1>Binary Boombox</h1>
+    <input 
+    type="text" 
+    id="search" 
+    placeholder="Søg efter et album, en sang, bands og kunstnere..." />
+    </header>                                            <!--TODO: LAV EN SØGEBAR--> 
+
+    <div class="hovedmenu"> 
+      <div><button class="button" onclick="showBox">Populære sange</button></div> 
+      <div><button class="button" onclick="showBox">Genre</button></div>
+      <div><button class="button" onclick="showBox">Sangkatalog</button></div> 
+      <div><button class="button" id="lucky" onclick="showBox">Feeling Lucky?</button></div> 
+    </div>      
+    </main>
+    
+                             <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
+    
+<div id="kurv">
+      <div>kurv</div>
+      <button class="cart-button">kurv</button>
+    </div>   <!--TODO: LAV CSS TIL KURV-->
+
+<!--TODO LAV POP-UP BOXES + LAV LAYER SÅ DE VISES-->
+<div class="hovedmenubox" id="populæresangebox" display: none; max-width: 50%; color: black;>
+  <h2>Populære sange</h2>
+  <ul>
+    <li>SANG1</li>
+    <li>SANG2</li>
+    <li>SANG3</li>
+    <li>SANG4</li>
+    <li>SANG5</li>
+    <li>SANG6</li>
+  </ul>
+</div> 
+<div class="hovedmenubox" id="Genre" display: none; max-width: 50%; color: black;>
+  <h2>Populære sange</h2>
+  <ul>
+    <li>GENRE1</li>
+    <li>GENRE2</li>
+    <li>GENRE3</li>
+    <li>GENRE4</li>
+    <li>GENRE5</li>
+    <li>GENRE6</li>
+  </ul>
+</div> 
+<div class="hovedmenubox" id="NyeUdgivelser" display: none; max-width: 50%; color: black;>
+  <h2>Populære sange</h2>
+  <ul>
+    <li>NY SANG1</li>
+    <li>NY SANG2</li>
+    <li>NY SANG3</li>
+    <li>NY SANG4</li>
+    <li>NY SANG5</li>
+    <li>NY SANG6</li>
+  </ul>
+</div> 
+<div class="hovedmenubox" id="FeelingLucky" display: none; max-width: 50%; color: black;>
+  <h2>Populære sange</h2>
+  <p></p>
+</div> 
+    <div id="screensaver">  
+      <h1>Binary BoomBox</h1> 
+      <p>Binary BoomBox — Gør stemningen valgfri.</p> 
+    </div> 
+    <script src="js/forside.js"></script> 
+  </body> 
+  </html>

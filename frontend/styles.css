@@ -36,11 +36,11 @@ header {
 .hovedmenu {
   position: fixed; /* låser menuen fast på skærmen*/
   top: 50%; /*flytter den ned til midten lodret*/
-  left: 50%;/*flytter den til midten vandret*/
+  left: 50%; /*flytter den til midten vandret*/
   transform: translate(-50%, -50%); /*centrere den præcist */
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);/*2 kollonner (2x2 layout)*/
+  grid-template-columns: repeat(2, 1fr); /*2 kollonner (2x2 layout)*/
   gap: 20px;
 }
 
@@ -151,12 +151,18 @@ header {
   align-items: center;
   flex-direction: column;
   p {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #b28cff;
+    font-size: 25px;
   }
+
   h1 {
-    font-family: "Boldonse", system-ui;
+    font-family: "Orbitron", system-ui;
     font-weight: 400;
     font-style: normal;
+    text-shadow: 2px 2px 0px #c2adf1;
   }
 }
 

@@ -1,3 +1,4 @@
+
 // DVALE TILSTAND
 let DvaleTiden; //
 const DvaleTid = 5000; // 5 sekunder før den går i dvale
@@ -26,7 +27,9 @@ function DesignDvale2() {
 
 resetTimer(); //Her bliver funktionen brugt på linje 4-6, hvilket sørger for at timeren starter med det samme, når skærmen ikke bliver brugt.
 
-// HELP POPUP KNAPPER - LAGT NED EFTER DVALE TILSTAND FOR AT UNDGÅ KONFLIKT MELLEM DE TO. Dvale tilstand er prioriteret over help popup, da dvale tilstand altid har den samme funktion. Knapperne kommer nok til at skabe konflikt senere hen hvis det står ovenover her.
+// HELP POPUP KNAPPER - LAGT NED EFTER DVALE TILSTAND FOR AT UNDGÅ KONFLIKT MELLEM DE TO. 
+// Dvale tilstand er prioriteret over help popup, da dvale tilstand altid har den samme funktion. 
+// Knapperne kommer nok til at skabe konflikt senere hen hvis det står ovenover her.
 
 const helpBtn = document.getElementById("help-btn");
 const helpPopup = document.getElementById("help-popup");

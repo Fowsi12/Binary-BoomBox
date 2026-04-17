@@ -15,7 +15,9 @@
     <title>Binary BoomBox</title>
   </head>
   <body>
+    <script src="frontend/endpoint-user.js"></script> 
 
+<!-- SIDEBAR -->
     <nav class="sidebar">
       <ul>
         <li><button id="hjem" onclick="window.location.href='index.html'">Hjem</button></li>
@@ -25,14 +27,19 @@
       </ul>
     </nav>
 
+<!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
     <main>
       <header>
     <h1>Binary Boombox</h1>
-    <input 
-    type="text" 
-    id="search" 
-    placeholder="Søg efter et album, en sang, bands og kunstnere..." />
-    </header>                                            <!--TODO: LAV EN SØGEBAR--> 
+    </header>   <!--TODO: LAV EN SØGEBAR--> 
+
+<!-- SØGEBAR -->
+    <nav id="search">
+      <input 
+      id="searchInput"
+      type="text"
+      placeholder="Søg efter et album, en sang, bands og kunstnere..." />
+    </nav>
 
     <div class="hovedmenu"> 
       <div><button class="button" onclick="showBox">Populære sange</button></div> 
@@ -40,17 +47,15 @@
       <div><button class="button" onclick="showBox">Sangkatalog</button></div> 
       <div><button class="button" id="lucky" onclick="showBox">Feeling Lucky?</button></div> 
     </div>      
-    </main>
-    
-                             <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
-    
+    </main>   <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
+
 <div id="kurv">
       <div>kurv</div>
       <button class="cart-button">kurv</button>
     </div>   <!--TODO: LAV CSS TIL KURV-->
 
 <!--TODO LAV POP-UP BOXES + LAV LAYER SÅ DE VISES-->
-<div class="hovedmenubox" id="populæresangebox" display: none; max-width: 50%; color: black;>
+<div class="hovedmenubox" id="populæresangebox">
   <h2>Populære sange</h2>
   <ul>
     <li>SANG1</li>
@@ -61,7 +66,7 @@
     <li>SANG6</li>
   </ul>
 </div> 
-<div class="hovedmenubox" id="Genre" display: none; max-width: 50%; color: black;>
+<div class="hovedmenubox" id="Genre">
   <h2>Populære sange</h2>
   <ul>
     <li>GENRE1</li>
@@ -72,7 +77,7 @@
     <li>GENRE6</li>
   </ul>
 </div> 
-<div class="hovedmenubox" id="NyeUdgivelser" display: none; max-width: 50%; color: black;>
+<div class="hovedmenubox" id="NyeUdgivelser">
   <h2>Populære sange</h2>
   <ul>
     <li>NY SANG1</li>
@@ -83,14 +88,17 @@
     <li>NY SANG6</li>
   </ul>
 </div> 
-<div class="hovedmenubox" id="FeelingLucky" display: none; max-width: 50%; color: black;>
+<div class="hovedmenubox" id="FeelingLucky">
   <h2>Populære sange</h2>
   <p></p>
 </div> 
+
+<!-- DISABLE/ENABLE SCREENSAVER --> 
+<!--
     <div id="screensaver">  
       <h1>Binary BoomBox</h1> 
       <p>Gør stemningen valgfri.</p> 
     </div> 
-    <script src="frontend/endpoint-user.js"></script> 
+-->
   </body> 
   </html>

@@ -11,3 +11,8 @@ if (helpBtn && helpPopup && closeBtn) {
     helpPopup.style.display = "none";
   });
 }
+
+//Funktion der viser pop up vinduerne fra knapperne på hovedmenuen
+function showMenuBox() {
+  document.getElementsByClassName("hovedmenubox").style.display = "block"
+};

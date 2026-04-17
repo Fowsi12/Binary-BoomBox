@@ -39,16 +39,16 @@
       <input 
       id="searchInput"
       type="text"
-      placeholder="Søg efter et album, en sang, bands og kunstnere..." />
+      placeholder="Søg efter sang, kunstner, album..." />
     </nav>
 
     <div class="hovedmenu"> 
-      <div><button class="button" onclick="showBox">Populære sange</button></div> 
-      <div><button class="button" onclick="showBox">Genre</button></div>
-      <div><button class="button" onclick="showBox">Sangkatalog</button></div> 
-      <div><button class="button" id="lucky" onclick="showBox">Feeling Lucky?</button></div> 
+      <div><button class="button" onclick="showMenuBox()">Populære sange</button></div> 
+      <div><button class="button" onclick="showMenuBox()">Genre</button></div>
+      <div><button class="button" onclick="showMenuBox()">Sangkatalog</button></div> 
+      <div><button class="button" id="lucky" onclick="showMenuBox()">Feeling Lucky?</button></div> 
     </div>      
-    </main>   <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
+    </main>    <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
 
 <div id="kurv">
       <div>kurv</div>
@@ -56,19 +56,21 @@
     </div>   <!--TODO: LAV CSS TIL KURV-->
 
 <!--TODO LAV POP-UP BOXES + LAV LAYER SÅ DE VISES-->
-<div class="hovedmenubox" id="populæresangebox">
+<div class="hovedmenubox" id="populæresangebox" style="display: none;">
+  <div id="PopulæresangeIndhold">
   <h2>Populære sange</h2>
-  <ul>
-    <li>SANG1</li>
-    <li>SANG2</li>
-    <li>SANG3</li>
-    <li>SANG4</li>
-    <li>SANG5</li>
-    <li>SANG6</li>
-  </ul>
+    <ul>
+      <li>SANG1 <button>Læg i kurv</button></li>
+      <li>SANG2 <button>Læg i kurv</button></li>
+      <li>SANG3 <button>Læg i kurv</button></li>
+      <li>SANG4 <button>Læg i kurv</button></li>
+      <li>SANG5 <button>Læg i kurv</button></li>
+      <li>SANG6 <button>Læg i kurv</button></li>
+    </ul>
+  </div>
 </div> 
 <div class="hovedmenubox" id="Genre">
-  <h2>Populære sange</h2>
+  <h2>Genre</h2>
   <ul>
     <li>GENRE1</li>
     <li>GENRE2</li>
@@ -79,7 +81,7 @@
   </ul>
 </div> 
 <div class="hovedmenubox" id="NyeUdgivelser">
-  <h2>Populære sange</h2>
+  <h2>Sang katalog</h2>
   <ul>
     <li>NY SANG1</li>
     <li>NY SANG2</li>
@@ -90,7 +92,7 @@
   </ul>
 </div> 
 <div class="hovedmenubox" id="FeelingLucky">
-  <h2>Populære sange</h2>
+  <h2>Feeling Lucky</h2>
   <p></p>
 </div> 
 

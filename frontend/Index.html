@@ -18,14 +18,14 @@
     <script src="frontend/endpoint-user.js"></script> 
 
 <!-- SIDEBAR -->
-    <nav class="sidebar">
-      <ul>
-        <li><button id="hjem" onclick="window.location.href='index.html'">Hjem</button></li>
-        <li><button id="senestafspillet" onclick="window.location.href='html/senestafspillet.html'">Senest afspillet</button></li>
-        <li><button id="kø" onclick="window.location.href='html/kø.html'">Kø</button></li>
-        <button id="help-btn" onClick>Hjælp</button>
-      </ul>
-    </nav>
+    <div class="sidebar">
+      <div id="sidebarButtonPos">
+          <button id="hjem" class=sidebarButton onclick="window.location.href='index.html'">Hjem</button>
+          <button id="senestafspillet" class=sidebarButton onclick="window.location.href='html/senestafspillet.html'">Senest afspillet</button>
+          <button id="kø" class=sidebarButton onclick="window.location.href='html/kø.html'">Kø</button>
+          <button id="help-btn" class=sidebarButton onClick>Hjælp</button>
+      </div>
+    </div>
 
 <!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
     <main>

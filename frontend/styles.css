@@ -218,6 +218,7 @@ header {
 
 body.Dvale #screensaver {
   display: flex;
+  z-index: 999;
 }
 
 /* POP-UP BOX STYLE */

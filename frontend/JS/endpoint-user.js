@@ -12,7 +12,23 @@ if (helpBtn && helpPopup && closeBtn) {
   });
 }
 
-//Funktion der viser pop up vinduerne fra knapperne på hovedmenuen
-function showMenuBox() {
-  document.getElementsByClassName("hovedmenubox").style.display = "block"
-};
+// SHOW HOVEDMENU POPUP BOXES //
+function showPopularSongsBox() {
+      document.getElementById("popularSongsBox").style.display = ("block");
+  }
+function showGenreBox() {
+      document.getElementById("genreBox").style.display = ("block")
+  }
+function showSongCataBox() {
+      document.getElementById("songCataBox").style.display = ("block")
+  }
+function showFeelingLuckyBox() {
+      document.getElementById("feelingLuckyBox").style.display = ("block")
+  }
+  // HIDE ALL POPUP BOXES //
+function hideAllBoxes() {
+  document.getElementById("popularSongsBox").style.display = "none";
+  document.getElementById("genreBox").style.display = "none";
+  document.getElementById("newReleasesBox").style.display = "none";
+  document.getElementById("feelingLuckyBox").style.display = "none";
+}

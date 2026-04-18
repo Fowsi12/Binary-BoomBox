@@ -25,7 +25,7 @@
     <title>Binary BoomBox</title>
   </head>
   <body>
-
+    <script src="JS/endpoint-user.js"></script>
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div id="sidebarButtonPos">
@@ -69,28 +69,47 @@
     </div>
     <!--TODO: LAV CSS TIL KURV-->
 
-                          <!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
+    <!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
     <main>
-      <div class="mainCont"> <!-- ALT I mainCont CENTRERES KORREKT I FORHOLD TIL SIDEBAR-->
+      <div class="mainCont">
+        <!-- ALT I mainCont CENTRERES KORREKT I FORHOLD TIL SIDEBAR-->
         <header>
           <h1>Binary Boombox</h1>
         </header>
 
-        <div id="search">         <!-- SØGEBAR -->
-          <input 
-          id="searchInput"
-          type="text"
-          placeholder="Søg efter et album, en sang, bands og kunstnere..." />
+        <div id="search">
+          <!-- SØGEBAR -->
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Søg efter et album, en sang, bands og kunstnere..."
+          />
         </div>
 
-        <div class="hovedmenu">   <!-- HOVEDMENU -->
-          <div><button class="button" onclick="showPopularSongsBox()">Populære sange</button></div> 
-          <div><button class="button" onclick="showGenreBox()">Genre</button></div>
-          <div><button class="button" onclick="showSongCataBox()">Sangkatalog</button></div> 
-          <div><button class="button" id="lucky" onclick="showFeelingLuckyBox()">Feeling Lucky?</button></div> 
+        <div class="hovedmenu">
+          <!-- HOVEDMENU -->
+          <div>
+            <button class="button" onclick="showPopularSongsBox()">
+              Populære sange
+            </button>
+          </div>
+          <div>
+            <button class="button" onclick="showGenreBox()">Genre</button>
+          </div>
+          <div>
+            <button class="button" onclick="showSongCataBox()">
+              Sangkatalog
+            </button>
+          </div>
+          <div>
+            <button class="button" id="lucky" onclick="showFeelingLuckyBox()">
+              Feeling Lucky?
+            </button>
+          </div>
         </div>
 
-        <div class="hovedmenubox" id="popularSongsBox"> <!-- POP-UP BOXES -->
+        <div class="hovedmenubox" id="popularSongsBox">
+          <!-- POP-UP BOXES -->
           <h2>Populære sange</h2>
           <ul>
             <li>SANG1 <button>Læg i kurv</button></li>
@@ -100,7 +119,7 @@
             <li>SANG5 <button>Læg i kurv</button></li>
             <li>SANG6 <button>Læg i kurv</button></li>
           </ul>
-        </div> 
+        </div>
         <div class="hovedmenubox" id="genreBox">
           <h2>Genre</h2>
           <ul>
@@ -111,7 +130,7 @@
             <li>GENRE5</li>
             <li>GENRE6</li>
           </ul>
-        </div> 
+        </div>
         <div class="hovedmenubox" id="songCataBox">
           <h2>Sang katalog</h2>
           <ul>
@@ -122,13 +141,14 @@
             <li>NY SANG5</li>
             <li>NY SANG6</li>
           </ul>
-        </div> 
+        </div>
         <div class="hovedmenubox" id="feelingLuckyBox">
           <h2>Feeling Lucky</h2>
           <p></p>
-        </div> 
+        </div>
       </div>
-    </main>   <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
+    </main>
+    <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES-->
 
     <!-- DISABLE/ENABLE SCREENSAVER -->
     <div id="screensaver">
@@ -138,3 +158,4 @@
 
     <script src="JS/dvale.js"></script>
   </body>
+</html>

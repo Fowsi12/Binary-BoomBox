@@ -18,7 +18,7 @@
   <body>
     <script src="JS/endpoint-user.js"></script> 
 
-<!-- SIDEBAR -->
+                                <!-- SIDEBAR -->
     <div class="sidebar">
       <div id="sidebarButtonPos">
           <button id="hjem" class=sidebarButton onclick="window.location.href='index.html'">Hjem</button>
@@ -28,26 +28,66 @@
       </div>
     </div>
 
-<!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
+                          <!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
     <main>
+    <div class="mainCont"> <!-- ALT I mainCont CENTRERES KORREKT I FORHOLD TIL SIDEBAR-->
       <header>
-    <h1>Binary Boombox</h1>
-    </header>   <!--TODO: LAV EN SØGEBAR--> 
+        <h1>Binary Boombox</h1>
+      </header>
 
-<!-- SØGEBAR -->
-    <nav id="search">
-      <input 
-      id="searchInput"
-      type="text"
-      placeholder="Søg efter et album, en sang, bands og kunstnere..." />
-    </nav>
+      <div id="search">   <!-- SØGEBAR -->
+        <input 
+          id="searchInput"
+          type="text"
+          placeholder="Søg efter sang, kunstner, album eller genre..." />
+      </div>   <!--TODO: LAV EN SØGEFUNKTION--> 
 
-    <div class="hovedmenu"> 
-      <div><button class="button" onclick="showBox">Populære sange</button></div> 
-      <div><button class="button" onclick="showBox">Genre</button></div>
-      <div><button class="button" onclick="showBox">Sangkatalog</button></div> 
-      <div><button class="button" id="lucky" onclick="showBox">Feeling Lucky?</button></div> 
-    </div>      
+      <div class="hovedmenu">    <!-- HOVEDMENU -->
+        <div><button class="button" id="popularBtn" onclick="showPopularSongsBox()">Populære sange</button></div> 
+        <div><button class="button" id="genreBtn" onclick="showGenreBox()">Genre</button></div>
+        <div><button class="button" id="songsBtn" onclick="showSongCataBox()">Sangkatalog</button></div> 
+        <div><button class="button" id="luckyBtn" onclick="showFeelingLuckyBox()">Feeling Lucky?</button></div> 
+      </div>
+
+      <div    
+        class="hovedmenubox" id="popularSongsBox"> <!-- POPUP BOXES -->
+        <h2>Populære sange</h2>
+        <ul>
+          <li>SANG1</li>
+          <li>SANG2</li>
+          <li>SANG3</li>
+          <li>SANG4</li>
+          <li>SANG5</li>
+          <li>SANG6</li>
+        </ul>
+      </div> 
+      <div class="hovedmenubox" id="genreBox">
+        <h2>Genre</h2>
+        <ul>
+          <li>GENRE1</li>
+          <li>GENRE2</li>
+          <li>GENRE3</li>
+          <li>GENRE4</li>
+          <li>GENRE5</li>
+          <li>GENRE6</li>
+        </ul>
+      </div> 
+      <div class="hovedmenubox" id="songCataBox">
+        <h2>Sangkatalog</h2>
+        <ul>
+          <li>NY SANG1</li>
+          <li>NY SANG2</li>
+          <li>NY SANG3</li>
+          <li>NY SANG4</li>
+          <li>NY SANG5</li>
+          <li>NY SANG6</li>
+        </ul>
+      </div> 
+      <div class="hovedmenubox" id="feelingLuckyBox">
+        <h2>Feeling Lucky?</h2>
+        <p>*TERNING*</p>
+      </div> 
+    </div>
     </main>   <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES--> 
 
 <div id="kurv">
@@ -56,50 +96,14 @@
     </div>   <!--TODO: LAV CSS TIL KURV-->
 
 <!--TODO LAV POP-UP BOXES + LAV LAYER SÅ DE VISES-->
-<div class="hovedmenubox" id="populæresangebox">
-  <h2>Populære sange</h2>
-  <ul>
-    <li>SANG1</li>
-    <li>SANG2</li>
-    <li>SANG3</li>
-    <li>SANG4</li>
-    <li>SANG5</li>
-    <li>SANG6</li>
-  </ul>
-</div> 
-<div class="hovedmenubox" id="Genre">
-  <h2>Populære sange</h2>
-  <ul>
-    <li>GENRE1</li>
-    <li>GENRE2</li>
-    <li>GENRE3</li>
-    <li>GENRE4</li>
-    <li>GENRE5</li>
-    <li>GENRE6</li>
-  </ul>
-</div> 
-<div class="hovedmenubox" id="NyeUdgivelser">
-  <h2>Populære sange</h2>
-  <ul>
-    <li>NY SANG1</li>
-    <li>NY SANG2</li>
-    <li>NY SANG3</li>
-    <li>NY SANG4</li>
-    <li>NY SANG5</li>
-    <li>NY SANG6</li>
-  </ul>
-</div> 
-<div class="hovedmenubox" id="FeelingLucky">
-  <h2>Populære sange</h2>
-  <p></p>
-</div> 
 
-<!-- DISABLE/ENABLE SCREENSAVER --> 
+
+<!-- DISABLE/ENABLE SCREENSAVER 
     <div id="screensaver">  
       <h1>Binary BoomBox</h1> 
       <p>Gør stemningen valgfri.</p> 
-    </div> 
+    </div>  -->
 
     <script src="JS/dvale.js"></script> 
   </body> 
-  </html>
+</html>

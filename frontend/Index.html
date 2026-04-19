@@ -62,7 +62,7 @@
         class="cartButton btnreact"
         onclick="">
         <img src="images/cart_symbol.png" id="cart_symbol">
-        Kurv
+        <p class="cartbuttonText">Kurv</p>
       </button>
     </div>
     <!--TODO: LAV CSS TIL KURV-->
@@ -88,20 +88,26 @@
           <!-- HOVEDMENU -->
           <div>
             <button class="mainbutton btnreact" onclick="showPopularSongsBox()">
-              Populære sange
+              <img src="images/rocket_launch.png" class="mainButtonSymbol">
+              <p class="mainButtonText">Populære sange</p>
             </button>
           </div>
           <div>
-            <button class="mainbutton btnreact" onclick="showGenreBox()">Genre</button>
+            <button class="mainbutton btnreact" onclick="showGenreBox()">
+              <img src="images/genres.png" class="mainButtonSymbol">
+              <p class="mainButtonText">Genre</p>
+            </button>
           </div>
           <div>
             <button class="mainbutton btnreact" onclick="showSongCataBox()">
-              Sangkatalog
+              <img src="images/library_music.png" class="mainButtonSymbol">
+              <p class="mainButtonText">Sangkatalog</p>
             </button>
           </div>
           <div>
             <button class="mainbutton btnreact" id="lucky" onclick="showFeelingLuckyBox()">
-              Feeling Lucky?
+              <img src="images/dice.png" class="mainButtonSymbol">
+              <p class="mainButtonText">Feeling lucky?</p>
             </button>
           </div>
         </div>
@@ -148,11 +154,11 @@
     </main>
     <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES-->
 
-    <!-- DISABLE/ENABLE SCREENSAVER
+
     <div id="screensaver">
       <h1>Binary BoomBox</h1>
       <p>Gør stemningen valgfri.</p>
-    </div> -->
+    </div>
 
     <script src="JS/dvale.js"></script>
   </body>

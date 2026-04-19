@@ -66,7 +66,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   border-color: #b300ff;
 }
 
-/* HOVEDMENU, BUTTONS, LUCKY - STYLES OG PLACEMENT */
+/* HOVEDMENU */
 .hovedmenu {
   margin: 5%;
   display: grid;
@@ -74,14 +74,35 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   gap: 80px; /* mellemrum mellem cellerne */
   width: 50%; /* størrelse på hovedmenuen ift. mainCont */
 }
-
+/* HOVEDMENU KNAPPER */
 .mainbutton {
+  z-index: 1; /* på højde med sidebar og kurv */
+  position: relative; /* knapperne bliver reference til billederne */
   width: 100%; /* knapperne fylder x af deres celler */
+  height: 125px;
+
+  display: flex;
+  justify-content: center; /* centrerer tekst vandret */
+  align-items: center;     /* centrerer tekst lodret */
+
   padding: 40px;
-  font-size: 20px;
+  font-size: 24px;
+}
+.mainButtonText {
+  position: absolute;
+  margin-left: 20%;
+}
+/* HOVEDMENU BILLEDER/IKONER */
+.mainButtonSymbol {
+  position: absolute;
+  left: 10%; /* afstand fra venstre kant */
+  margin-right: 50px;
+  top: 50%;
+  transform: translateY(-50%); /* lodret centrering */
+  width: 60px;
 }
 
-/* POPUP BOXES FRA HOVEDMENU */
+/* HOVEDMENU POPUP BOXES */
 .hovedmenubox {
   position: absolute;
   top: 82%;
@@ -91,7 +112,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   width: 1200px;
   height: 600px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.75s;
   display: none;
 
   background-color: black;
@@ -154,7 +175,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
 /* KURV STYLE */
 .cartButton {
   /*Positioning */
-  z-index: 1;
+  z-index: 1; /* på linje med sidebar og mainbuttons */
   position: fixed; /* fixed betyder den ikke bevæger sig når man scroller
                       og knappen bliver en reference for indholdet/billedet */
   top: 5%;
@@ -169,9 +190,15 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   font-size: 20px;
   padding: 15px;
 }
+.cartbuttonText {
+ margin-left: 25%;
+}
 #cart_symbol {
-  width: 15%;
-  float: left;
+  position: absolute;
+  left: 10%; /* afstand fra venstre kant: skubber billedet ud til venstre */
+  top: 50%;
+  transform: translateY(-50%); /* lodret centrering */
+  width: 35px;
 }
 
 /* SCREENSAVER STYLE */

@@ -40,7 +40,7 @@
           id="senestafspillet"
           class="sidebarButton btnreact"
           onclick="window.location.href = 'html/senestafspillet.html'">
-          Senest afspillet
+          Seneste afspillede
         </button>
         <button
           id="kø"
@@ -80,7 +80,7 @@
           <input
             id="searchInput"
             type="text"
-            placeholder="Søg efter et album, en sang, bands og kunstnere..."
+            placeholder="Søg efter album, sang, kunstner, genre..."
           />
         </div>
 
@@ -115,6 +115,11 @@
         <div class="hovedmenubox" id="popularSongsBox">
           <!-- POP-UP BOXES -->
           <h2>Populære sange</h2>
+          <div class="hideMainBoxButtonContent">
+            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
+              <img src="images/close_cross.png"> <p>Tilbage</p>
+            </button>
+          </div>
           <ul>
             <li>SANG1 <button>Læg i kurv</button></li>
             <li>SANG2 <button>Læg i kurv</button></li>
@@ -126,6 +131,11 @@
         </div>
         <div class="hovedmenubox" id="genreBox">
           <h2>Genre</h2>
+          <div class="hideMainBoxButtonContent">
+            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
+              <img src="images/close_cross.png"> <p>Tilbage</p>
+            </button>
+          </div>
           <ul>
             <li>GENRE1</li>
             <li>GENRE2</li>
@@ -136,7 +146,12 @@
           </ul>
         </div>
         <div class="hovedmenubox" id="songCataBox">
-          <h2>Sang katalog</h2>
+          <h2>Sangkatalog</h2>
+          <div class="hideMainBoxButtonContent">
+            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
+              <img src="images/close_cross.png"> <p>Tilbage</p>
+            </button>
+          </div>
           <ul>
             <li>NY SANG1</li>
             <li>NY SANG2</li>
@@ -148,18 +163,23 @@
         </div>
         <div class="hovedmenubox" id="feelingLuckyBox">
           <h2>Feeling Lucky</h2>
+          <div class="hideMainBoxButtonContent">
+            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
+              <img src="images/close_cross.png"> <p>Tilbage</p>
+            </button>
+          </div>
           <p></p>
         </div>
       </div>
     </main>
     <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES-->
 
-
+<!--
     <div id="screensaver">
       <h1>Binary BoomBox</h1>
       <p>Gør stemningen valgfri.</p>
     </div>
-
+  -->
     <script src="JS/dvale.js"></script>
   </body>
 </html>

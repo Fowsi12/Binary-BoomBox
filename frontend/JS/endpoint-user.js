@@ -40,14 +40,27 @@ function showFeelingLuckyBox() {
   const box = document.getElementById("feelingLuckyBox")
     box.style.display = ("block");
     setTimeout(function () { 
-    box.style.opacity = ("1");
-    }, 5);
+      box.style.opacity = ("1");
+    }, 500);
  }
   // HIDE ALL HOVEDMENU POPUP BOXES //
-function hideAllBoxes() {
+function hideAllMainBoxes() {
+  const boxes = [
+    document.getElementById("popularSongsBox"),
+    document.getElementById("genreBox"),
+    document.getElementById("songCataBox"),
+    document.getElementById("feelingLuckyBox"),
+  ];
+  boxes.forEach(function(box) {
+    box.style.opacity = ("0");
+    setTimeout(function () {
+      box.style.display = "none";
+    }, 500);
+  });
+}
+
+ /*
   document.getElementById("popularSongsBox").style.display = "none";
   document.getElementById("genreBox").style.display = "none";
   document.getElementById("newReleasesBox").style.display = "none";
-  document.getElementById("feelingLuckyBox").style.display = "none";
-}
-
+  document.getElementById("feelingLuckyBox").style.display = "none"; */

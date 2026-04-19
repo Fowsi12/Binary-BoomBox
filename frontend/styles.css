@@ -62,7 +62,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   box-shadow: 0 2px 2px black;
 }
 .btnreact:hover {
-  background: #333;
+  background: #202020;
   border-color: #b300ff;
 }
 
@@ -72,7 +72,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   display: grid;
   grid-template-columns: repeat(2, 1fr); /*2 kollonner (2x2 layout)*/
   gap: 80px; /* mellemrum mellem cellerne */
-  width: 50%; /* størrelse på hovedmenuen ift. mainCont */
+  width: 800px; /* størrelse på hovedmenuen ift. mainCont */
 }
 /* HOVEDMENU KNAPPER */
 .mainbutton {
@@ -86,11 +86,11 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   align-items: center;     /* centrerer tekst lodret */
 
   padding: 40px;
+  padding-left: 120px; /* giver luft mellem ikon og tekst på knapper*/
   font-size: 24px;
 }
 .mainButtonText {
   position: absolute;
-  margin-left: 20%;
 }
 /* HOVEDMENU BILLEDER/IKONER */
 .mainButtonSymbol {
@@ -104,31 +104,35 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
 
 /* HOVEDMENU POPUP BOXES */
 .hovedmenubox {
-  position: absolute;
-  top: 82%;
-  left: 50%; /* 15% sidebar + halvdelen af 85% */
+  position: absolute; /* overlay position over knapper*/
+  top: 32.5%; /*jo højere værdi, jo længere væk fra toppen */
+  left: 50%; 
   transform: translate(-50%, -50%);
 
-  width: 1200px;
-  height: 600px;
+  width: 62.5%;
+  height: 55.5%;
   opacity: 0;
-  transition: opacity 0.75s;
+  transition: opacity 0.5s;
   display: none;
 
-  background-color: black;
+  background-color: #2c352d;
   border: 4px solid purple;
   border-radius: 75px;
   color: white;
   z-index: 10;
 }
-
 .hovedmenubox h2 {
   color: yellow;
-  font-family: "Orbitron", sans-serif;
   text-align: center;
 }
+.hideMainBoxButton {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  width: 60px;
+}
 
-/* SIDEBAR STYLE */
+/* SIDEBAR */
 .sidebar {
   width: 15%;
   position: fixed; 
@@ -137,7 +141,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   display: flex;
   flex-direction: column;
   align-items: center; /* ALT I mainCont centreres */
-  background: #292929;
+  background: #2c352d;
   border-right: solid 2px purple;
   z-index: 1;
 }
@@ -151,13 +155,13 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   margin-top: 70%;
 }
 .sidebarButton {
-  width: 200px;
+  width: 70%;
   margin-bottom: 10%;
   padding: 10px;
   font-size: 16px;
 }
 
-/* LOGO PLACEMENT STYLES */
+/* LOGO PLACEMENT */
 #music_note_purple {
   position: relative;
   text-align: center;
@@ -165,14 +169,14 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   float: top;
 }
 
-/* HJÆLP BUTTON STYLE */
+/* HJÆLP BUTTON */
 .help-btn {
   margin-top: auto;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
 }
 
-/* KURV STYLE */
+/* KURV */
 .cartButton {
   /*Positioning */
   z-index: 1; /* på linje med sidebar og mainbuttons */
@@ -191,7 +195,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   padding: 15px;
 }
 .cartbuttonText {
- margin-left: 25%;
+ margin-left: 40px;
 }
 #cart_symbol {
   position: absolute;

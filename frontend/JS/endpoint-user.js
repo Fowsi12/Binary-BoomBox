@@ -14,21 +14,40 @@ if (helpBtn && helpPopup && closeBtn) {
 
 // SHOW HOVEDMENU POPUP BOXES //
 function showPopularSongsBox() {
-      document.getElementById("popularSongsBox").style.display = ("block");
-  }
+  const box = document.getElementById("popularSongsBox")
+    box.style.display = ("block");
+    /* timeout funktion så browseren når at render ændring 
+    på display og opacity og derefter laver transition til opacity 1*/
+    setTimeout(function () { 
+    box.style.opacity = ("1");
+    }, 5);
+}
 function showGenreBox() {
-      document.getElementById("genreBox").style.display = ("block")
-  }
+  const box = document.getElementById("genreBox")
+    box.style.display = ("block");
+    setTimeout(function () { 
+    box.style.opacity = ("1");
+    }, 5);
+}
 function showSongCataBox() {
-      document.getElementById("songCataBox").style.display = ("block")
-  }
+  const box = document.getElementById("songCataBox")
+    box.style.display = ("block");
+    setTimeout(function () { 
+    box.style.opacity = ("1");
+    }, 5);
+}
 function showFeelingLuckyBox() {
-      document.getElementById("feelingLuckyBox").style.display = ("block")
-  }
-  // HIDE ALL POPUP BOXES //
+  const box = document.getElementById("feelingLuckyBox")
+    box.style.display = ("block");
+    setTimeout(function () { 
+    box.style.opacity = ("1");
+    }, 5);
+ }
+  // HIDE ALL HOVEDMENU POPUP BOXES //
 function hideAllBoxes() {
   document.getElementById("popularSongsBox").style.display = "none";
   document.getElementById("genreBox").style.display = "none";
   document.getElementById("newReleasesBox").style.display = "none";
   document.getElementById("feelingLuckyBox").style.display = "none";
 }
+

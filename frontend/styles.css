@@ -22,18 +22,20 @@ body {
   margin-left: 15%; /* mainCont starter sin margin 15% inde på siden (sidebar) */
   width: 85%; /* mainCont total bredde er 85% af skærmen */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Alt i mainCont stables lodret */
   align-items: center; /* ALT I mainCont centreres */
   position: relative; /* Parent til Popup boxes, don't touch!! */
 }
 
 header {
   background: transparent; /* ingen baggrund for headeren - vigtigt */
+  z-index: 0;
 }
 
 /* SEARCH BAR */
 #search {
-  margin: 1%;
+  margin-top: -2%;
+  z-index: 2;
 }
 #searchInput {
   width: 500px; 
@@ -41,40 +43,45 @@ header {
   font-size: 16px;
 }
 
+/* FÆLLES CLASS TIL ALLE KNAPPER: 
+DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
+.btnreact {
+  background-color: black;
+  color: yellow;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  border: 4px solid purple;
+  box-shadow: 0 5px 5px black;/* skyggeeffekt: right px bottom px længde px farve */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 100px;
+}
+.btnreact:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 2px black;
+}
+.btnreact:hover {
+  background: #333;
+  border-color: #b300ff;
+}
+
 /* HOVEDMENU, BUTTONS, LUCKY - STYLES OG PLACEMENT */
 .hovedmenu {
   margin: 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /*2 kollonner (2x2 layout)*/
-  gap: 50px; /* mellemrum mellem cellerne */
-  width: 40%; /* størrelse på hovedmenuen ift. mainCont */
+  gap: 80px; /* mellemrum mellem cellerne */
+  width: 50%; /* størrelse på hovedmenuen ift. mainCont */
 }
 
-.button {
-  background-color: black;
-  color: yellow;
-  width: 100%; /* knapperne fylder 100% af deres celler */
+.mainbutton {
+  width: 100%; /* knapperne fylder x af deres celler */
   padding: 40px;
-  border: 4px solid purple;
-  border-radius: 100px;
-  box-shadow: 0 5px 5px black; /* skyggeeffekt: right px bottom px længde px farve */
-  cursor: pointer;
-  transition: transform 0.2s;
   font-size: 20px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-}
-.button:active {
-  background: #333;
-  transform: translateY(5px);
-  box-shadow: 0 1px 1px black;
-}
-.button:hover {
-  background: #333;
-  border-color: #b300ff;
 }
 
-/* POPUP BOXES FRA HOVEDMENU KNAPPER */
+/* POPUP BOXES FRA HOVEDMENU */
 .hovedmenubox {
   position: absolute;
   top: 82%;
@@ -83,6 +90,9 @@ header {
 
   width: 1200px;
   height: 600px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: none;
 
   background-color: black;
   border: 4px solid purple;
@@ -90,30 +100,17 @@ header {
   color: white;
   z-index: 10;
 }
+
 .hovedmenubox h2 {
   color: yellow;
   font-family: "Orbitron", sans-serif;
   text-align: center;
 }
 
-#popularSongsBox {
-  display: none;
-  transition: 2s;
-}
-#genreBox {
-  display: none;
-}
-#songCataBox {
-  display: none;
-}
-#feelingLuckyBox {
-  display: none;
-}
-
 /* SIDEBAR STYLE */
 .sidebar {
   width: 15%;
-  position: fixed;
+  position: fixed; 
   height: 100vh;
   padding-top: 2%;
   display: flex;
@@ -121,6 +118,7 @@ header {
   align-items: center; /* ALT I mainCont centreres */
   background: #292929;
   border-right: solid 2px purple;
+  z-index: 1;
 }
 /* SIDEBAR BUTTONS*/
 #sidebarButtonPos {
@@ -135,25 +133,7 @@ header {
   width: 200px;
   margin-bottom: 10%;
   padding: 10px;
-  background-color: black;
-  color: yellow;
-  border: 2px solid purple;
-  border-radius: 100px;
-  box-shadow: 0 3px 3px black;
-  transition: 0.2s;
-  cursor: pointer;
   font-size: 16px;
-  text-align: center;
-  font-weight: bold;
-}
-.sidebarButton:active {
-  background: #333;
-  transform: translateY(3px);
-  box-shadow: 0 1px 1px black;
-}
-.sidebarButton:hover {
-  background-color: #222;
-  border-color: #b300ff;
 }
 
 /* LOGO PLACEMENT STYLES */
@@ -172,20 +152,26 @@ header {
 }
 
 /* KURV STYLE */
-.cart-button {
-  position: fixed; /* fixed betyder den ikke bevæger sig når man scroller*/
-  top: 20px;
-  right: 20px;
-  background-color: black;
-  color: yellow;
-  padding: 10px 15px;
-  border: 2px solid purple; /* lilla ring rundt om knappen*/
-  border-radius: 8px; /* gør kanterne lidt runde*/
-  cursor: pointer; /* musen(cursor) bliver til en hånd over knappen*/
-  font-size: 16 px;
+.cartButton {
+  /*Positioning */
+  z-index: 1;
+  position: fixed; /* fixed betyder den ikke bevæger sig når man scroller
+                      og knappen bliver en reference for indholdet/billedet */
+  top: 5%;
+  right: 2%;
+  width: 10%;
+  height: 8%;
+  /* Indhold */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centrerer tekst vandret */
+  align-items: center;     /* centrerer tekst lodret */
+  font-size: 20px;
+  padding: 15px;
 }
-.cart-button:hover {
-  background-color: #333; /* lidt lysere sort når man hover*/
+#cart_symbol {
+  width: 15%;
+  float: left;
 }
 
 /* SCREENSAVER STYLE */
@@ -223,7 +209,7 @@ body.Dvale #screensaver {
   z-index: 999;
 }
 
-/* POP-UP BOX STYLE */
+/* HELP POPUP BOX STYLE */
 #help-popup {
   position: fixed;
   inset: 0;

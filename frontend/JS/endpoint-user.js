@@ -12,7 +12,7 @@ if (helpBtn && helpPopup && closeBtn) {
   });
 }
 
-// SHOW HOVEDMENU POPUP BOXES //
+            // SHOW HOVEDMENU POPUP BOXES //
 function showPopularSongsBox() {
   const box = document.getElementById("popularSongsBox")
     box.style.display = ("block");
@@ -43,7 +43,7 @@ function showFeelingLuckyBox() {
       box.style.opacity = ("1");
     }, 500);
  }
-  // HIDE ALL HOVEDMENU POPUP BOXES //
+            // HIDE ALL HOVEDMENU POPUP BOXES //
 function hideAllMainBoxes() {
   const boxes = [
     document.getElementById("popularSongsBox"),
@@ -59,8 +59,12 @@ function hideAllMainBoxes() {
   });
 }
 
- /*
-  document.getElementById("popularSongsBox").style.display = "none";
-  document.getElementById("genreBox").style.display = "none";
-  document.getElementById("newReleasesBox").style.display = "none";
-  document.getElementById("feelingLuckyBox").style.display = "none"; */
+            // ADD TO BASKET //
+let basketAmount = 0
+console.log("Current basket count: " + basketAmount)
+function addToBasket() {
+  console.log("Song added to basket")
+  console.log("Current amount in basket: " + basketAmount)
+  basketAmount++;
+  document.getElementById("amountInCart").innerHTML = basketAmount;
+}

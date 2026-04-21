@@ -2,7 +2,7 @@ import pg from "pg";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+/*
 const env = {
   host: process.env.PG_HOST,
   port: parseInt(process.env.PG_PORT),
@@ -11,7 +11,7 @@ const env = {
   password: process.env.PG_PASSWORD,
   ssl: { rejectUnauthorized: false },
 };
-
+*/
 const env1 = {
   host: process.env.PG_HOST1,
   port: parseInt(process.env.PG_PORT1),
@@ -20,7 +20,7 @@ const env1 = {
   password: process.env.PG_PASSWORD1,
   ssl: { rejectUnauthorized: false },
 };
-
+/*
 const env2 = {
   host: process.env.PG_HOST2,
   port: parseInt(process.env.PG_PORT2),
@@ -29,13 +29,13 @@ const env2 = {
   password: process.env.PG_PASSWORD2,
   ssl: { rejectUnauthorized: false },
 };
-
+*/
 export async function connect() {
-  const client = new pg.Client(env);
+  const client = new pg.Client(env1);
   await client.connect();
   return client;
 }
 
 export function pool() {
-  return new pg.Pool(env);
+  return new pg.Pool(env1);
 }

@@ -62,7 +62,7 @@
         class="cartButton btnreact"
         onclick="">
         <img src="images/cart_symbol.png" id="cart_symbol">
-        <p class="cartbuttonText">Kurv</p>
+        <p class="cartbuttonText">Kurv:&nbsp;</p><p id="amountInCart">0</p>
       </button>
     </div>
     <!--TODO: LAV CSS TIL KURV-->
@@ -121,12 +121,12 @@
             </button>
           </div>
           <ul>
-            <li>SANG1 <button>Læg i kurv</button></li>
-            <li>SANG2 <button>Læg i kurv</button></li>
-            <li>SANG3 <button>Læg i kurv</button></li>
-            <li>SANG4 <button>Læg i kurv</button></li>
-            <li>SANG5 <button>Læg i kurv</button></li>
-            <li>SANG6 <button>Læg i kurv</button></li>
+            <li>SANG1 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG2 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG3 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG4 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG5 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG6 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
           </ul>
         </div>
         <div class="hovedmenubox" id="genreBox">

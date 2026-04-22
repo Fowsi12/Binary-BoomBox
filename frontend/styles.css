@@ -191,7 +191,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
                       og knappen bliver en reference for indholdet/billedet */
   top: 5%;
   right: 2%;
-  width: 10%;
+  width: 12%;
   height: 8%;
   /* Indhold */
   display: flex;
@@ -201,7 +201,7 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   font-size: 20px;
   padding: 15px;
 }
-.cartbuttonText {
+#cartbuttonText {
  margin-left: 40px;
 }
 #cart_symbol {
@@ -210,6 +210,22 @@ DE SER ENS UD OG REAGERER PÅ SAMME MÅDE */
   top: 50%;
   transform: translateY(-50%); /* lodret centrering */
   width: 35px;
+}
+/* KURV POPUP BOX*/
+#cartPopup {
+  display: none;
+  z-index: 1;
+  position: fixed;
+
+  margin-left: 85%;
+  margin-right: 2%;
+  top: 18%;
+  width: 15%;
+  height: 75%;
+
+  background-color: #2c352d;
+  border: 4px solid #b300ff;
+  border-radius: 50px 0 0 50px;
 }
 
 /* SCREENSAVER STYLE */

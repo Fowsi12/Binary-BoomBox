@@ -1,6 +1,6 @@
 // DVALE TILSTAND
 let DvaleTiden; //
-const DvaleTid = 10000; // 10 sekunder før den går i dvale
+const DvaleTid = 60000; // 60 sekunder før den går i dvale
 
 function resetTimer() {
   clearTimeout(DvaleTiden); // Stopper den nuværende timer, hvis der er en

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Senest afspillet</title>
+</head>
+<body>
+    <main>
+      <div class="mainCont">
+        <!-- ALT I mainCont CENTRERES KORREKT I FORHOLD TIL SIDEBAR-->
+        <header>
+          <h1>Senest Afspillet</h1>
+        </header>
+
+        <div id="search">
+          <!-- SØGEBAR -->
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Søg efter album, sang, kunstner, genre..."
+          />
+        </div>
+    </main>
+
+    
+    <div class="sidebar">     <!-- SIDEBAR -->
+      <div id="sidebarButtonPos">
+        <button
+          id="hjem"
+          class="sidebarButton btnreact"
+          onclick="window.location.href = '../index.html'">
+          Hjem
+        </button>
+        <button
+          id="senestafspillet"
+          class="sidebarButton btnreact"
+          onclick="window.location.href = 'senestafspillet.html'">
+          Seneste afspillede
+        </button>
+        <button
+          id="kø"
+          class="sidebarButton btnreact"
+          onclick="window.location.href = 'kø.html'">
+          Kø
+        </button>
+        <button 
+          id="help-btn" 
+          class="sidebarButton btnreact"
+          onClick="">
+          Hjælp
+        </button>
+      </div>
+    </div>
+
+    <div id="screensaver">
+      <h1>Binary BoomBox</h1>
+      <p>Gør stemningen valgfri.</p>
+    </div>
+
+    <script src="../JS/dvale.js"></script>
+</body>
+</html>

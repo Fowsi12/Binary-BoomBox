@@ -39,13 +39,13 @@
         <button
           id="senestafspillet"
           class="sidebarButton btnreact"
-          onclick="window.location.href = 'html/senestafspillet.html'">
+          onclick="window.location.href = 'subpages/senestafspillet.html'">
           Seneste afspillede
         </button>
         <button
           id="kø"
           class="sidebarButton btnreact"
-          onclick="window.location.href = 'html/kø.html'">
+          onclick="window.location.href = 'subpages/kø.html'">
           Kø
         </button>
         <button 
@@ -57,16 +57,27 @@
       </div>
     </div>
 
-    <div id="kurv">    <!-- KURV -->
-      <button
+    <div>
+      <button 
+        id="kurv"
         class="cartButton btnreact"
-        onclick="">
+        onclick="showHideBasket()"
+        >
         <img src="images/cart_symbol.png" id="cart_symbol">
-        <p class="cartbuttonText">Kurv:&nbsp;</p><p id="amountInCart">0</p>
+        <p id="cartbuttonText">Vis kurv:&nbsp;</p><p id="amountInCart">0</p>
       </button>
     </div>
     <!--TODO: LAV CSS TIL KURV-->
 
+      <!-- KURV POPUP BOX --><!--VISES NÅR MAN TRYKKER PÅ KURV-->
+  
+    <div 
+      id="cartPopup">
+      <button onclick="subpages/Betalingsside.html">
+      </button>
+    </div>
+    
+    
     <!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
     <main>
       <div class="mainCont">
@@ -121,12 +132,12 @@
             </button>
           </div>
           <ul>
-            <li>SANG1 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG2 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG3 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG4 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG5 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG6 <button class="addToBasket" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG1 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG2 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG3 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG4 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG5 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>SANG6 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
           </ul>
         </div>
         <div class="hovedmenubox" id="genreBox">
@@ -153,12 +164,12 @@
             </button>
           </div>
           <ul>
-            <li>NY SANG1</li>
-            <li>NY SANG2</li>
-            <li>NY SANG3</li>
-            <li>NY SANG4</li>
-            <li>NY SANG5</li>
-            <li>NY SANG6</li>
+            <li>NY SANG1 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>NY SANG2 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>NY SANG3 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>NY SANG4 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>NY SANG5 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>NY SANG6 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
           </ul>
         </div>
         <div class="hovedmenubox" id="feelingLuckyBox">

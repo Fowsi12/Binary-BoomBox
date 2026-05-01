@@ -28,56 +28,51 @@
   <body>
     <script src="JS/endpoint-user.js"></script>
 
-    <div class="sidebar">     <!-- SIDEBAR -->
+    <div class="sidebar">
+      <!-- SIDEBAR -->
       <div id="sidebarButtonPos">
         <button
           id="hjem"
           class="sidebarButton btnreact"
-          onclick="window.location.href = 'index.html'">
+          onclick="window.location.href = 'index.html'"
+        >
           Hjem
         </button>
         <button
           id="senestafspillet"
           class="sidebarButton btnreact"
-          onclick="window.location.href = 'subpages/senestafspillet.html'">
+          onclick="window.location.href = 'subpages/senestafspillet.html'"
+        >
           Seneste afspillede
         </button>
         <button
           id="kø"
           class="sidebarButton btnreact"
-          onclick="window.location.href = 'subpages/kø.html'">
+          onclick="window.location.href = 'subpages/kø.html'"
+        >
           Kø
         </button>
-        <button 
-          id="help-btn" 
-          class="sidebarButton btnreact"
-          onClick="">
+        <button id="help-btn" class="sidebarButton btnreact" onClick="">
           Hjælp
         </button>
       </div>
     </div>
 
     <div>
-      <button 
-        id="kurv"
-        class="cartButton btnreact"
-        onclick="showHideBasket()"
-        >
-        <img src="images/cart_symbol.png" id="cart_symbol">
-        <p id="cartbuttonText">Vis kurv:&nbsp;</p><p id="amountInCart">0</p>
+      <button id="kurv" class="cartButton btnreact" onclick="showHideBasket()">
+        <img src="images/cart_symbol.png" id="cart_symbol" />
+        <p id="cartbuttonText">Vis kurv:&nbsp;</p>
+        <p id="amountInCart">0</p>
       </button>
     </div>
     <!--TODO: LAV CSS TIL KURV-->
 
-      <!-- KURV POPUP BOX --><!--VISES NÅR MAN TRYKKER PÅ KURV-->
-  
-    <div 
-      id="cartPopup">
-      <button onclick="subpages/Betalingsside.html">
-      </button>
+    <!-- KURV POPUP BOX --><!--VISES NÅR MAN TRYKKER PÅ KURV!!-->
+
+    <div id="cartPopup">
+      <button onclick="subpages / Betalingsside.html"></button>
     </div>
-    
-    
+
     <!-- HOVEDMENU (SØGEBAR og MENUKNAPPER) -->
     <main>
       <div class="mainCont">
@@ -99,25 +94,29 @@
           <!-- HOVEDMENU -->
           <div>
             <button class="mainbutton btnreact" onclick="showPopularSongsBox()">
-              <img src="images/rocket_launch.png" class="mainButtonSymbol">
+              <img src="images/rocket_launch.png" class="mainButtonSymbol" />
               <p class="mainButtonText">Populære sange</p>
             </button>
           </div>
           <div>
             <button class="mainbutton btnreact" onclick="showGenreBox()">
-              <img src="images/genres.png" class="mainButtonSymbol">
+              <img src="images/genres.png" class="mainButtonSymbol" />
               <p class="mainButtonText">Genre</p>
             </button>
           </div>
           <div>
             <button class="mainbutton btnreact" onclick="showSongCataBox()">
-              <img src="images/library_music.png" class="mainButtonSymbol">
+              <img src="images/library_music.png" class="mainButtonSymbol" />
               <p class="mainButtonText">Sangkatalog</p>
             </button>
           </div>
           <div>
-            <button class="mainbutton btnreact" id="lucky" onclick="showFeelingLuckyBox()">
-              <img src="images/dice.png" class="mainButtonSymbol">
+            <button
+              class="mainbutton btnreact"
+              id="lucky"
+              onclick="showFeelingLuckyBox()"
+            >
+              <img src="images/dice.png" class="mainButtonSymbol" />
               <p class="mainButtonText">Feeling lucky?</p>
             </button>
           </div>
@@ -127,24 +126,60 @@
           <!-- POP-UP BOXES -->
           <h2>Populære sange</h2>
           <div class="hideMainBoxButtonContent">
-            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
-              <img src="images/close_cross.png" class="closeMainBoxSymbol">
+            <button
+              class="hideMainBoxButton btnreact"
+              onclick="hideAllMainBoxes()"
+            >
+              <img src="images/close_cross.png" class="closeMainBoxSymbol" />
             </button>
           </div>
           <ul>
-            <li>SANG1 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG2 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG3 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG4 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG5 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>SANG6 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>
+              SANG1
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              SANG2
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              SANG3
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              SANG4
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              SANG5
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              SANG6
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
           </ul>
         </div>
         <div class="hovedmenubox" id="genreBox">
           <h2>Genre</h2>
           <div class="hideMainBoxButtonContent">
-            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
-              <img src="images/close_cross.png" class="closeMainBoxSymbol">
+            <button
+              class="hideMainBoxButton btnreact"
+              onclick="hideAllMainBoxes()"
+            >
+              <img src="images/close_cross.png" class="closeMainBoxSymbol" />
             </button>
           </div>
           <ul>
@@ -159,24 +194,60 @@
         <div class="hovedmenubox" id="songCataBox">
           <h2>Sangkatalog</h2>
           <div class="hideMainBoxButtonContent">
-            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
-              <img src="images/close_cross.png" class="closeMainBoxSymbol">
+            <button
+              class="hideMainBoxButton btnreact"
+              onclick="hideAllMainBoxes()"
+            >
+              <img src="images/close_cross.png" class="closeMainBoxSymbol" />
             </button>
           </div>
           <ul>
-            <li>NY SANG1 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>NY SANG2 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>NY SANG3 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>NY SANG4 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>NY SANG5 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
-            <li>NY SANG6 <button class="addToBasket btnreact" onclick="addToBasket()">Læg i kurv</button></li>
+            <li>
+              NY SANG1
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              NY SANG2
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              NY SANG3
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              NY SANG4
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              NY SANG5
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
+            <li>
+              NY SANG6
+              <button class="addToBasket btnreact" onclick="addToBasket()">
+                Læg i kurv
+              </button>
+            </li>
           </ul>
         </div>
         <div class="hovedmenubox" id="feelingLuckyBox">
           <h2>Feeling Lucky</h2>
           <div class="hideMainBoxButtonContent">
-            <button class="hideMainBoxButton btnreact" onclick="hideAllMainBoxes()">
-              <img src="images/close_cross.png" class="closeMainBoxSymbol">
+            <button
+              class="hideMainBoxButton btnreact"
+              onclick="hideAllMainBoxes()"
+            >
+              <img src="images/close_cross.png" class="closeMainBoxSymbol" />
             </button>
           </div>
           <p></p>
@@ -184,7 +255,6 @@
       </div>
     </main>
     <!--TODO: LAV FUNKTION CALL FOR AT VISE POP UP BOXES-->
-
 
     <div id="screensaver">
       <h1>Binary BoomBox</h1>
